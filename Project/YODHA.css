@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+:root{
+
+
+--border:2rem ;
+
+}
+body {
+    font-size: 16px;
+    margin: 20px;
+  }
+  
+*{
+    font-family : 'Poppins', sans-serif;
+    margin:0 ; padding: 0 ;
+    box-sizing: border-box;
+    outline: none ; border: none ;
+    text-transform:capitalize;
+    
+    text-decoration:none;
+}
+
+html{
+    font: 70%;
+    overflow-x: hidden;
+    scroll-padding-top: 8rem;
+    scroll-behavior: smooth;
+    background-image:url("bg1.png.gif");
+   
+    background-size: cover;
+}
+
+section{
+    padding:2rem 9%;
+}
+.head{
+    padding:1rem 9%;
+    position:fixed;
+    top:0 ;left:0; right:0;
+    z-index:1000;
+    box-shadow: 0 .5rem 1.5rem #83d3da;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    }
+
+
+    .head .logo{
+        font-size: 2.1rem;
+        margin-left: 0.1rem;
+        color: red;
+       
+
+    }
+    
+
+    .head .logo i{
+        color:#8ecde9	;
+        
+    }
+    .head .logo i:hover{
+        color:red;}
+
+    .head .navbar a{
+
+        font-size: 1.1rem;
+        font-family:fantasy;
+        color:#8ecde9	;
+        margin-right: 3rem;
+    }
+
+    .head .navbar a:hover{
+
+        color:red;
+
+    }
+
+    .home{
+        display:flex;
+        align-items: center;
+        flex-wrap:wrap;
+      
+        padding-top:4rem;
+    }
+
+    .home .image{
+        flex:1 1 40rem;
+          }
+
+    .home .image img{
+        width:80%;
+    }
+
+    .home .text h3{
+        font-family: fantasy;
+        font-size: 1.8rem;
+        color:rgba(2, 9, 27, 0.647);
+        
+    }
+
+    .btn{
+        
+        display: inline-block;
+        padding:0.5rem;
+        margin-top: 0.5rem;
+        padding-left: 1rem;
+        border-style: solid;
+        border-width: 0.2rem;
+        border-radius: 9rem;
+        margin-left: 5rem;
+        
+        
+        font-size:1.5rem;
+        color:blueviolet;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        cursor:pointer;
+
+        animation-name: slideInLeft;
+        animation-duration: 4s;
+        
+    }
+
+    .btn:hover{
+        color:rgb(255, 6, 6);
+        transition: transform 0.3s ease 0s;
+    }
+    .head1{
+        margin-top: 5.3rem;
+        
+        background-image: url("Doctor-GIF-2.gif") ;
+               
+     padding:1rem 40%;
+        position:fixed;
+        top: 0;left:0; right:0;
+        box-shadow: 0 .5rem 1.5rem #83d3da;
+       
+    }
+
+    .head1 a{
+        color:#83d3da;
+    }
+
+    .head1 a:hover{
+        color: red;
+    }
+
+    .p a{
+        
+        color:rgba(2, 9, 27, 0.647);
+        
+        font-size: 1.4rem;        
+
+        
+        
+        
+    }
+      .p a:hover{
+    color: tomato;
+    }
+.image{
+        zoom:40%;
+        margin-top: 14rem;
+        
+        
+    }
+.image2{
+        zoom:85%
+    }
+   .text h3:hover{
+        color: tomato;
+    }
+.follow w{
+    zoom: 120%;
+    margin-left:12rem ;
+    margin-top: 1rem;
+    border-style:solid;
+    border-width: 0.1rem;
+    border-radius: 9rem;
+    padding:0.5rem;
+    
+}
+.follow K{
+    zoom: 120%;
+    margin-right: 12rem;
+    border-style:solid;
+    border-radius: 9rem;
+    border-width: 0.1rem;
+    padding:0.5rem;
+}
+.follow u{
+    zoom: 120%;
+    margin-left:24rem ;
+    border-style:solid;
+    box-sizing:content-box;
+    border-radius: 9rem;
+    border-width: 0.1rem;
+    padding:0.5rem;
+    
+}
+    .p{
+        margin-top: 1rem;
+    }
+
+    .image2 h1{
+        color:#83d3da;
+       
+    
+    }
+
+    .image2 h4{
+        color:rosybrown
+    }
+
+    h1{
+        color:#83d3da;
+    
+    }
+
+    h4{
+        color:violet;
+        margin-right: 8rem;
+    }
+    
+    #about-us {
+     
+      padding: 70px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .about-content {
+      max-width: 1200px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .about-text {
+      flex: 1;
+      text-align: left;
+    }
+    
+    .about-text h2 {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 20px;
+      margin-left: 180px;
+    }
+    
+    .about-text p {
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 15px;
+    }
+    
+    .about-text ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+    
+    .about-text li {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 8px;
+    }
+    
+    .about-image {
+      flex: 1;
+      text-align: center;
+    }
+    
+    .about-image img {
+      width: 100%;
+      margin-left: 70px;
+      border-radius: 40px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+
+    }
+
+    .about-image img:hover{ 
+        transform: scale(1.03);
+    }
+
+ 
+    .contact-box {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    .contact-box h1 {
+        color: #83d3da;
+    }
+    
+    .contact-box p, .contact-box address {
+        font-size: 1.2rem;
+        color: #555;
+        margin-bottom: 10px;
+    }
+    
+    .contact-box a {
+        color: #045ffb;
+        text-decoration: none;
+    }
+    
+    .contact-box a:hover {
+        color: #ff0000;
+    }
+    
+    

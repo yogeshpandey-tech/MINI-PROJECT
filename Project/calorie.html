@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YODHA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="calorie.css">
+</head>
+<body>
+    <header>
+        <div class="head">
+            <a href="http://127.0.0.1:5500/YODHA.html" class="logo"><i class="fa-solid fa-truck-medical fa-beat"> YODHA</i></a>
+            <nav class="navbar">
+                <a href="YODHA.html">🏠HOME</a>
+                <a href="aboutus.html">📚ABOUT US</a>
+                <a href="why.html">🔖HEALTH TIPS</a>
+                <a href="services.html">👨‍⚕️OUR SERVICES</a>
+                <a href="contact us.html">☎️CONTACT US</a>
+                <a href="blog.html">⭐BLOGS</a>
+            </nav>
+        </div>
+    </header>
+    <section class="calorie-burn-calculator">
+        <h2>Calorie Burn Calculator</h2>
+        <form id="calorieBurnForm">
+            <label for="activity">Select Activity:</label>
+            <select id="activity" name="activity">
+                <option value="running">Running</option>
+                <option value="cycling">Cycling</option>
+                <option value="swimming">Swimming</option>
+                <option value="jumping_rope">Jumping Rope</option>
+                <option value="weight_lifting">Weight Lifting</option>
+                <option value="yoga">Yoga</option>
+                <option value="aerobics">Aerobics</option>
+                <option value="dancing">Dancing</option>
+                <option value="hiking">Hiking</option>
+                <option value="rowing">Rowing</option>
+                <option value="basketball">Basketball</option>
+                <option value="soccer">Soccer</option>
+                <option value="tennis">Tennis</option>
+                <option value="skiing">Skiing</option>
+                <option value="snowboarding">Snowboarding</option>
+                <option value="surfing">Surfing</option>
+                <option value="martial_arts">Martial Arts</option>
+                <option value="rock_climbing">Rock Climbing</option>
+                <option value="gardening">Gardening</option>
+                <option value="cleaning">Cleaning</option>
+                <option value="cooking">Cooking</option>
+                <option value="playing_instrument">Playing an Instrument</option>
+                <option value="desk_work">Desk Work</option>
+                <option value="sleeping">Sleeping</option>
+            </select>
+    
+            <label for="duration">Duration (minutes):</label>
+            <input type="number" id="duration" name="duration" required>
+    
+            <label for="intensity">Intensity:</label>
+            <input type="range" id="intensity" name="intensity" min="1" max="10" value="5">
+            <span id="intensityValue"></span>
+    
+            <button type="button" onclick="calculateCaloriesBurned()">Calculate</button>
+        </form>
+    
+        <div id="result"></div>
+    </section>
+    
+    <script src="calorie.js"></script>
+</body>
+</html>

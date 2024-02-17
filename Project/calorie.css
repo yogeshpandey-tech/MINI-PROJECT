@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+:root {
+    --border: 2rem;
+}
+
+body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-image: url("bg1.png.gif");
+    background-size: cover;
+}
+
+html {
+    font: 70%;
+    overflow-x: hidden;
+    scroll-padding-top: 8rem;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+.head {
+    padding:1rem 9%;
+    position:fixed;
+    top:0 ;left:0; right:0;
+    z-index:1000;
+    box-shadow: 0 .5rem 1.5rem #83d3da;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.head .logo {
+    font-size: 2.1rem;
+    color: red;
+}
+
+.head .logo i {
+    color: #8ecde9;
+}
+
+.head .logo i:hover {
+    color: red;
+}
+
+.head .navbar a {
+    font-size: 1.1rem;
+    font-family: fantasy;
+    color: #8ecde9;
+    margin-right: 3rem;
+    text-decoration: none;
+}
+
+.head .navbar a:hover {
+    color: red;
+}
+
+.calorie-burn-calculator {
+    padding: 7rem 40%;
+    border-radius: 10px;
+     
+    margin-top: 4rem;
+    
+}
+
+.calorie-burn-calculator h2 {
+    font-family: fantasy;
+    font-size: 1.5rem;
+    color: rgba(2, 9, 27, 0.647);
+    margin-bottom: 1rem;
+}
+
+#calorieBurnForm {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    
+}
+
+.form-group {
+    flex: 1 1 100%;
+}
+
+#calorieBurnForm label {
+    font-family: fantasy;
+    font-size: 0.9rem;
+    color: rgba(2, 9, 27, 0.647);
+    margin-bottom: 0.3rem;
+}
+
+#calorieBurnForm input,
+#calorieBurnForm select {
+    width: 100%;
+    padding: 0.3rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#calorieBurnForm button {
+    background-color: #8ecde9;
+    color: #fff;
+    padding: 0.6rem 1rem; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 25px;
+    margin-left: 80px;
+}
+
+#result {
+    margin-top: 2rem; 
+    font-family: fantasy;
+    font-size: 1rem;
+    color: #333;
+    margin-left: 30px;
+
+}

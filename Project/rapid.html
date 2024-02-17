@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rapid Symptom Checker</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f9fa;
+      background-image: url(bg1.png.gif);
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #symptomChecker {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 20px #c2f1f8d6;
+      padding: 30px;
+      text-align: center;
+      width: 500px;
+      height: 353px;
+      
+      
+    }
+
+    h2 {
+      color:#83d3da;
+      margin-top: 18px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 10px;
+      color: #495057;
+      margin-top: 18px;
+    }
+
+    select {
+      margin: 10px 0;
+      padding: 12px;
+      width: 100%;
+      appearance: none;
+      border: none;
+      border-radius: 5px;
+      background-color: #f8f9fa;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    select:hover {
+      background-color: #e0e0e0;
+    }
+
+    select option[disabled] {
+      color: #495057;
+      text-align: center;
+    }
+
+    button {
+      background-color:#83d3da;
+      color: #fff;
+      padding: 10px 10px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    #recommendedMedicines {
+      margin-top: 18px;
+      font-size: 18px;
+      color: #83d3da;
+    }
+
+    #medicineDetails {
+      margin-top: 5px;
+      margin-left: 5px; 
+      font-size: 16px;
+      color: #495057;
+    }
+    *{
+    font-family : 'Poppins', sans-serif;
+    margin:0 ; padding: 0 ;
+    box-sizing: border-box;
+    outline: none ; border: none ;
+    text-transform:capitalize;
+    
+    text-decoration:none;
+}
+
+html{
+    font: 70%;
+    overflow-x: hidden;
+    scroll-padding-top: 8rem;
+    scroll-behavior: smooth;
+    background-image: url(bg1.png.gif);
+    background-size: cover;
+}
+
+section{
+    padding:2rem 9%;
+}
+.head{
+    padding:1rem 9%;
+    position:fixed;
+    top:0 ;left:0; right:0;
+    z-index:1000;
+    box-shadow: 0 .5rem 1.5rem #83d3da;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    }
+
+
+    .head .logo{
+        font-size: 2.1rem;
+        margin-left: 0.1rem;
+        color: red;
+       
+
+    }
+    
+
+    .head .logo i{
+        color:#8ecde9	;
+        
+    }
+    .head .logo i:hover{
+        color:red;}
+
+    .head .navbar a{
+
+        font-size: 1.1rem;
+        font-family:fantasy;
+        color:#8ecde9	;
+        margin-right: 3rem;
+    }
+
+    .head .navbar a:hover{
+
+        color:red;
+
+    }
+
+    .home{
+        display:flex;
+        align-items: center;
+        flex-wrap:wrap;
+      
+        padding-top:4rem;
+    }
+
+    .home .image{
+        flex:1 1 40rem;
+          }
+
+    .home .image img{
+        width:80%;
+    }
+
+    .home .text h3{
+        font-family: fantasy;
+        font-size: 1.8rem;
+        color:rgba(2, 9, 27, 0.647);
+        
+    }
+    footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 .5rem 1.5rem #00f0fc;
+    color: black;
+    z-index: 1000;
+    font-style: oblique;
+    padding: 10px 0;
+    background-color: #f8f9fa; 
+}
+
+footer p {
+    font-size: 120%;
+    margin: 0; 
+}
+    
+  </style>
+</head>
+<body>
+    <header>
+        <div class="head">
+            <a href="http://127.0.0.1:5500/YODHA.html" class="logo"><i class="fa-solid fa-truck-medical fa-beat"> YODHA</i> </a> 
+            <nav class="navbar">
+                <a href="YODHA.html">🏠HOME</a>
+                <a href="aboutus.html">📚ABOUT US</a>
+                <a href="why.html">🔖HEALTH TIPS</a>
+                <a href="services.html">👨‍⚕️OUR SERVICES</a>
+                <a href="contact us.html">☎️CONTACT US</a>
+                <a href="blog.html">⭐BLOGS</a>
+                </div>
+            </nav>
+            
+      </header>
+
+<div id="symptomChecker">
+  <h2>Rapid Symptom Checker</h2>
+  <form id="symptomForm">
+    <label for="symptoms">Select symptoms:</label>
+    <select id="symptoms" name="symptoms" onclick="populateDropdown()">
+      <option value="" disabled selected>Please choose your symptoms</option>
+      <option value="placeholder">Select from below</option>
+    </select>
+    <button type="button" onclick="checkSymptoms()">Check Symptoms</button>
+  </form>
+  <div id="recommendedMedicines"></div>
+  <div id="medicineDetails"></div>
+</div>
+
+
+
+<script>
+  function populateDropdown() {
+    const dropdown = document.getElementById('symptoms');
+    if (dropdown.options.length === 2) {
+      const symptoms = ['headache', 'fever', 'cough', 'sore throat', 'runny nose', 'diarrhea', 'stomach pain', 'muscle pain', 'fatigue', 'chills', 'sweating', 'congestion', 'sinus pain', 'sinus congestion', 'nausea', 'vomiting', 'constipation', 'indigestion', 'heartburn', 'acid reflux', 'gastroenteritis', 'stomach flu', 'stomach bug', 'stomach virus', 'stomach infection', 'stomach bacterial infection', 'stomach parasitic infection', 'stomach amoeba infection', 'stomach giardia infection', 'stomach giardiasis', 'stomach upset', 'stomach cramps', 'stomach gas', 'stomach bloating', 'stomach acid', 'stomach burning', 'stomach discomfort', 'stomach pressure', 'stomach tightness', 'stomach tenderness', 'stomach heaviness', 'stomach fullness', 'stomach squeezing', 'stomach pinching', 'stomach ache', 'stomach pain after eating', 'stomach pain after meals', 'stomach pain in the morning', 'stomach pain at night', 'stomach pain in the evening', 'stomach pain in the afternoon', 'stomach pain in the upper abdomen', 'stomach pain in the lower abdomen', 'stomach pain in the left side', 'stomach pain in the right side', 'stomach pain in the middle', 'stomach pain in the center', 'stomach pain in the lower left side', 'stomach pain in the lower right side', 'stomach pain in the upper left side', 'stomach pain in the upper right side'];
+      
+      symptoms.forEach(symptom => {
+        const option = document.createElement('option');
+        option.value = symptom;
+        option.textContent = symptom.charAt(0).toUpperCase() + symptom.slice(1);
+        dropdown.appendChild(option);
+      });
+    }
+  }
+
+  function checkSymptoms() {
+    const selectedSymptoms = document.getElementById('symptoms');
+    const userSymptoms = Array.from(selectedSymptoms.selectedOptions, option => option.value);
+
+    const recommendedMedicines = checkSymptomsFunction(userSymptoms);
+
+    const recommendedMedicinesDiv = document.getElementById('recommendedMedicines');
+    recommendedMedicinesDiv.innerHTML = '<h3>Recommended Medicines:</h3>';
+
+    const medicineDetailsDiv = document.getElementById('medicineDetails');
+    medicineDetailsDiv.innerHTML = '';
+
+    recommendedMedicines.forEach((medicine, index) => {
+      const medicineItem = document.createElement('p');
+      medicineItem.textContent = `${index + 1}. ${medicine.name}`;
+      recommendedMedicinesDiv.appendChild(medicineItem);
+
+   
+      const detailsItem = document.createElement('p');
+      detailsItem.textContent = `Usage: ${medicine.usage}`;
+      medicineDetailsDiv.appendChild(detailsItem);
+    });
+  }
+
+  function checkSymptomsFunction(userSymptoms) {
+    const symptoms = {
+      'headache': { name: 'Paracetamol', usage: 'Relieves pain and reduces fever' },
+      'fever': { name: 'Acetaminophen', usage: 'Reduces fever and relieves pain' },
+      'cough': { name: 'Robitussin', usage: 'Relieves cough symptoms' },
+      'sore throat': { name: 'Zinc lozenges', usage: 'Helps soothe sore throat' },
+      'runny nose': { name: 'Nasal decongestant spray', usage: 'Relieves nasal congestion' },
+      'diarrhea': { name: 'Imodium', usage: 'Controls symptoms of diarrhea' },
+      'stomach pain': { name: 'Pepto-Bismol', usage: 'Relieves stomach pain and discomfort' },
+      'muscle pain': { name: 'Ibuprofen', usage: 'Reduces muscle pain and inflammation' },
+      'fatigue': { name: 'Tylenol', usage: 'Relieves pain and reduces fever' },
+      'chills': { name: 'Zinc lozenges', usage: 'Helps alleviate chills' },
+      'sweating': { name: 'Calamine lotion', usage: 'Provides relief from sweating' },
+      'congestion': { name: 'Decongestant nasal spray', usage: 'Relieves nasal congestion' },
+      'sinus pain': { name: 'Decongestant nasal spray', usage: 'Relieves sinus pain' },
+      'sinus congestion': { name: 'Decongestant nasal spray', usage: 'Relieves sinus congestion' },
+      'nausea': { name: 'Ginger ale', usage: 'Helps alleviate nausea' },
+      'vomiting': { name: 'Zofran', usage: 'Prevents and treats vomiting' },
+      'constipation': { name: 'Magnesium citrate', usage: 'Relieves constipation' },
+      'indigestion': { name: 'Tums', usage: 'Relieves indigestion' },
+      'heartburn': { name: 'Ranitidine', usage: 'Reduces stomach acid production' },
+      'acid reflux': { name: 'Omeprazole', usage: 'Reduces stomach acid production' },
+      'gastroenteritis': { name: 'Loratadine', usage: 'Relieves symptoms of gastroenteritis' },
+      'stomach flu': { name: 'Omeprazole', usage: 'Reduces stomach acid production' },
+      'stomach bug': { name: 'Omeprazole', usage: 'Reduces stomach acid production' },
+      'stomach virus': { name: 'Omeprazole', usage: 'Reduces stomach acid production' },
+      'stomach infection': { name: 'Metronidazole', usage: 'Treats bacterial infections' },
+      'stomach bacterial infection': { name: 'Metronidazole', usage: 'Treats bacterial infections' },
+      'stomach parasitic infection': { name: 'Pyrantel', usage: 'Treats parasitic infections' },
+      'stomach amoeba infection': { name: 'Metronidazole', usage: 'Treats amoebic infections' },
+      'stomach giardia infection': { name: 'Metronidazole', usage: 'Treats giardia infections' },
+      'stomach giardiasis': { name: 'Metronidazole', usage: 'Treats giardiasis' },
+      'stomach upset': { name: 'Pepto-Bismol', usage: 'Relieves stomach upset' },
+      'stomach cramps': { name: 'Calcium carbonate', usage: 'Relieves stomach cramps' },
+      'stomach gas': { name: 'Simethicone', usage: 'Relieves stomach gas' },
+      'stomach bloating': { name: 'Simethicone', usage: 'Relieves stomach bloating' },
+      'stomach acid': { name: 'Calcium carbonate', usage: 'Reduces stomach acid' },
+      'stomach burning': { name: 'Calcium carbonate', usage: 'Relieves stomach burning' },
+      'stomach discomfort': { name: 'Calcium carbonate', usage: 'Relieves stomach discomfort' },
+      'stomach pressure': { name: 'Calcium carbonate', usage: 'Relieves stomach pressure' },
+      'stomach tightness': { name: 'Calcium carbonate', usage: 'Relieves stomach tightness' },
+      'stomach tenderness': { name: 'Calcium carbonate', usage: 'Relieves stomach tenderness' },
+      'stomach heaviness': { name: 'Calcium carbonate', usage: 'Relieves stomach heaviness' },
+      'stomach fullness': { name: 'Calcium carbonate', usage: 'Relieves stomach fullness' },
+      'stomach squeezing': { name: 'Calcium carbonate', usage: 'Relieves stomach squeezing' },
+      'stomach pinching': { name: 'Calcium carbonate', usage: 'Relieves stomach pinching' },
+      'stomach ache': { name: 'Calcium carbonate', usage: 'Relieves stomach ache' },
+      'stomach pain after eating': { name: 'Calcium carbonate', usage: 'Relieves stomach pain after eating' },
+      'stomach pain after meals': { name: 'Calcium carbonate', usage: 'Relieves stomach pain after meals' },
+      'stomach pain in the morning': { name: 'Calcium carbonate', usage: 'Relieves morning stomach pain' },
+      'stomach pain at night': { name: 'Calcium carbonate', usage: 'Relieves nighttime stomach pain' },
+      'stomach pain in the evening': { name: 'Calcium carbonate', usage: 'Relieves evening stomach pain' },
+      'stomach pain in the afternoon': { name: 'Calcium carbonate', usage: 'Relieves afternoon stomach pain' },
+      'stomach pain in the upper abdomen': { name: 'Calcium carbonate', usage: 'Relieves upper abdominal pain' },
+      'stomach pain in the lower abdomen': { name: 'Calcium carbonate', usage: 'Relieves lower abdominal pain' },
+      'stomach pain in the left side': { name: 'Calcium carbonate', usage: 'Relieves left-sided stomach pain' },
+      'stomach pain in the right side': { name: 'Calcium carbonate', usage: 'Relieves right-sided stomach pain' },
+      'stomach pain in the middle': { name: 'Calcium carbonate', usage: 'Relieves middle stomach pain' },
+      'stomach pain in the center': { name: 'Calcium carbonate', usage: 'Relieves central stomach pain' },
+      'stomach pain in the lower left side': { name: 'Calcium carbonate', usage: 'Relieves lower left-sided stomach pain' },
+      'stomach pain in the lower right side': { name: 'Calcium carbonate', usage: 'Relieves lower right-sided stomach pain' },
+      'stomach pain in the upper left side': { name: 'Calcium carbonate', usage: 'Relieves upper left-sided stomach pain' },
+      'stomach pain in the upper right side': { name: 'Calcium carbonate', usage: 'Relieves upper right-sided stomach pain' },
+    };
+
+    const recommendedMedicines = [];
+
+    userSymptoms.forEach(symptom => {
+      if (symptoms.hasOwnProperty(symptom)) {
+        recommendedMedicines.push(symptoms[symptom]);
+      } else {
+        recommendedMedicines.push({ name: 'No specific medicine', usage: 'Not available' });
+      }
+    });
+
+    return recommendedMedicines;
+  }
+</script>
+
+</body>
+</html>

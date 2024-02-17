@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+:root{
+
+
+--border:2rem ;
+
+}
+body {
+    font-size: 16px;
+    margin: 20px;
+  }
+  
+*{
+    font-family : 'Poppins', sans-serif;
+    margin:0 ; padding: 0 ;
+    box-sizing: border-box;
+    outline: none ; border: none ;
+    text-transform:capitalize;
+    
+    text-decoration:none;
+}
+
+html{
+    font: 70%;
+    overflow-x: hidden;
+    scroll-padding-top: 8rem;
+    scroll-behavior: smooth;
+    background-image:url("bg1.png.gif");
+   
+    background-size: cover;
+}
+
+section{
+    padding:2rem 9%;
+}
+.head{
+    padding:1rem 9%;
+    position:fixed;
+    top:0 ;left:0; right:0;
+    z-index:1000;
+    box-shadow: 0 .5rem 1.5rem #83d3da;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    }
+
+
+    .head .logo{
+        font-size: 2.1rem;
+        margin-left: 0.1rem;
+        color: red;
+       
+
+    }
+    
+
+    .head .logo i{
+        color:#8ecde9	;
+        
+    }
+    .head .logo i:hover{
+        color:red;}
+
+    .head .navbar a{
+
+        font-size: 1.1rem;
+        font-family:fantasy;
+        color:#8ecde9	;
+        margin-right: 3rem;
+    }
+
+    .head .navbar a:hover{
+
+        color:red;
+
+    }
+    #our-services {
+      
+        padding: 100px 0;
+        text-align: center;
+    }
+    
+    .services-container {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 40px;
+    }
+     h1 {
+        font-size: 30px;
+     }
+    .service {
+        width: 300px;
+        margin-top: 80px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        background-color: white;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .service:hover {
+        transform: scale(1.1);
+    }
+    
+    .service i {
+        font-size: 40px;
+        margin-bottom: 20px;
+        color:#83d3da;
+    }
+    
+    .service h3 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        color: #333;
+    }
+    
+    .service p {
+        font-size: 1.2rem;
+        color: #555;
+    }
+    
